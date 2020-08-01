@@ -107,10 +107,10 @@ function phoneAuth(){
         window.confirmationResult = confirmationResult;
         coderesult = confirmationResult;
         console.log(coderesult);
-        alert("message sent")
+        alert("message sent");
     }).catch(function (error){
         alert(error.message);
-    })
+    });
 
 }
 
