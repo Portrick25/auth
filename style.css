@@ -34,3 +34,14 @@ button{
     text-transform: capitalize;
    
 }
+
+
+@media only screen and (max-width: 800px){
+    #formcontainer{
+        grid-template-columns: auto;
+
+    }
+    button{
+        width: 80vh;
+    }
+}
