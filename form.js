@@ -103,7 +103,7 @@ function render(){
 
 function phoneAuth(){
     var number = document.getElementById('number');
-    firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function(confirmation){
+    firebase.auth().signInWithPhoneNumber(number.value,window.recaptchaVerifier).then(function(confirmation){
         window.confirmationResult = confirmationResult;
         coderesult = confirmationResult;
         console.log(coderesult);
