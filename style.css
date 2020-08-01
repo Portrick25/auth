@@ -38,6 +38,7 @@ button{
 
 @media only screen and (max-width: 800px){
     #formcontainer{
+        display:grid;
         grid-template-columns: auto;
 
     }
