@@ -101,3 +101,27 @@ function render(){
     recaptchaVerifier.render();
 }
 
+function phoneAuth(){
+    var number = document.getElementById('number');
+    firebase.auth().signInWithPhoneNumber(number,window.recaptchaVerifier).then(function(confirmation){
+        window.confirmationResult = confirmationResult;
+        coderesult = confirmationResult;
+        console.log(coderesult);
+        alert("message sent")
+    }).catch(function (error){
+        alert(error.message);
+    })
+
+}
+
+
+function codeVerify(){
+    var code = document.getElementById('verificationCode').value;
+    coderesult.confirm(code).then(function(result){
+        alert("successfully registered");
+        var user = result.user();
+        console.log(user);
+    }).catch(function (error){
+        alert(error.message);
+    })
+}
